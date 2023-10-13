@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root {
+    --color-card-light: #fff;
+    --color-card-dark: #000;
+}
+
+
+* { /*  Estilização para tudo   */
+    margin:0;
+    padding: 0;
+    font-family: 'Tilt Neon', sans-serif;
+    transition: all 0.3s;
+}
+
+body {  /*  Estiliza todos os elementos abaixo dele   */
+    background-color: rgb(181, 240, 255);
+    display: block;
+    align-items: center;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+/* 
+    background: url("https://c4.wallpaperflare.com/wallpaper/766/661/134/sea-flight-rocks-bird-wallpaper-preview.jpg");
+    background-size: cover; */
+}
+#telalogin {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+#telalogin #changeTheme {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    padding-bottom: 30px;
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+#telalogin #changeTheme svg {
+    width: 35px;
+    height: auto;
+    transform: rotate(0);
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+button:hover {
+    scale: 102%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.459);
+}
+#telalogin #changeTheme:hover svg {
+    transform: rotate(90deg);
+}
+.card-login {    /*  Estiliza apenas os elementos do login   */
+    position: relative;
+    background: var(--color-card-light);
+    width: 400px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.253);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.card-login:hover {
+    scale: 102%;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.514);
+}
+
+.card-login .text {
+    margin-bottom: 10px;
+}
+.card-login input { /*  Estiliza TODOS os inputs   */
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    border-radius: 7px;
+    display: block;
+    margin-top: 1px;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(240, 248, 255, 0.747);
+    outline: none;
+    text-align: center;
+}
+
+
+.card-login label {  /*  Estiliza os textos a cima dos inputs de texto  */
+    display: block;
+    margin-bottom: 1px;
+}
+.card-login button{   /*  Estiliza os inputs de texto  */
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    border-radius: 7px;
+    display: block;
+    margin-top: 1px;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(240, 248, 255, 0.747);
+    outline: none;
+    text-align: center;
+    
+    font-size: 13pt;
+    color: white;
+    background: rgb(5, 110, 247);
+    cursor:pointer;
+    margin: 15px 0;
+
+    
+}
+.card-login input:hover {   /*  Estiliza TODOS os inputs quando passo o mouse por cima  */
+    scale: 102%;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.479);
+    border: 1px solid transparent;
+}
+
+.card-login input[type="text"]:focus {   /*  Estiliza os inputs quando entro em modo de foco   */
+    scale: 102%;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.479);
+    border: 1px solid transparent;
+}
+
+.card-login a { /*  Estiliza os links  */
+    font-size: 10pt;
+    margin-bottom: -15px;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    
+}
+.card-login a:hover {   /*  Estilização os links quando passo o mouse por cima  */
+    color:rgb(5, 110, 247);
+    font-size: 100.05%;
+}
+
+[data-theme-selected="light"] #changeTheme .btn-light {
+    display: none;
+    
+}
+[data-theme-selected="dark"] #changeTheme .btn-dark {
+    display: none;
+}
+
+[data-theme-selected="dark"] .card-login {
+    background: rgba(44, 44, 44, 1);
+}
+
+[data-theme-selected="dark"] label {
+    color: white
+}
+
+[data-theme-selected="dark"] a {
+    color: white
+}
+
+[data-theme-selected="dark"] .text input {
+    background: rgba(255, 255, 255, 0.103);
+    color: white;
+}
+.text input#senha {
+    /*font-family: 'Tilt Neon', sans-serif;*/
+    -webkit-text-security: square;
+}
+
+[data-theme-selected="dark"] body {
+    background: linear-gradient(120deg, rgb(71, 71, 71), rgb(39, 39, 39));
+}
+[data-theme-selected="dark"] .card-login input[type="text"]:focus{
+    color: white;
+}
+
+[data-theme-selected="dark"] input[type='button'] {
+    background-color: rgb(0, 89, 206);
+    /* color:rgba(44, 44, 44, 1); */
+    /*font-weight: bold;*/
+}
+
+body[data-theme-selected="dark"] {
+    background: linear-gradient(120deg,rgba(0, 0, 0, 0.747),rgba(0, 0, 0, 0.719))
+}
+
+[data-theme-selected="dark"] #telalogin #changeTheme {
+    background-color: rgba(44, 44, 44, 1);;
+}
+
+#telalogin #changeTheme:hover {
+    top: -50px
+}
